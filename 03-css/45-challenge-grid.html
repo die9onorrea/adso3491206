@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45-challenge-grid</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        .images {
+			display: grid;
+			grid-gap: 10px;
+			min-height: 50dvh;
+            grid-area: auto;
+
+            .item01 {
+                background: url(imgs/ainz.jpg) no-repeat center;
+            }
+
+            & * {
+                color: #d8b3fe;
+                font-family: Arial;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1px;
+                margin-right: 1px;
+            }
+		}
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M112,56V200L40,128Z" opacity="0.2"></path><path d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>45-challenge-grid</h1>
+            <img src="../src/imgs/logo-css.png" alt="CSS">
+            <h3>Irregular Gallery: Grid Areas</h3>
+        </header>
+        <section>
+            <h2 class="subtitle">Gallery 1:
+                <div class="images">
+		            <div class="item01"></div>
+		            <div class="item02"></div>
+		            <div class="item03"></div>
+		            <div class="item04"></div>
+		            <div class="item05"></div>
+                    <div class="item06"></div>
+                    <div class="item07"></div>
+	            </div>
+            </h2>
+        </section>
+    </main>
+</body>
+</html>
