@@ -6,52 +6,91 @@
     <title>45-challenge-grid</title>
     <link rel="stylesheet" href="../src/css/styles.css">
     <style>
-        .images {
-			display: grid;
-			grid-gap: 10px;
-			min-height: 50dvh;
-            grid-area: auto;
+        .gallery {
+            display: grid;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-sizing: border-box;
+        }
 
-            .item01 {
-                background: url(imgs/ainz.jpg) no-repeat center;
-            }
+        .gallery div {
+            margin: 5px;
+            background: #8aa4e8;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-            & * {
-                color: #d8b3fe;
-                font-family: Arial;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 1px;
-                margin-right: 1px;
-            }
-		}
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .a { grid-area: a; }
+        .b { grid-area: b; }
+        .c { grid-area: c; }
+        .d { grid-area: d; }
+        .e { grid-area: e; }
+        .f { grid-area: f; }
+        .g { grid-area: g; }
+
+        .gallery-1 {
+            aspect-ratio: 3 / 3;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a b c"
+                "d b e"
+                "f f g";
+        }
+
+        .gallery-2 {
+            aspect-ratio: 4 / 3;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a a b c"
+                "a a d d"
+                "e f d d";
+        }
     </style>
 </head>
 <body class="css">
     <nav class="back">
         <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M112,56V200L40,128Z" opacity="0.2"></path><path d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
         </a>
     </nav>
     <main>
         <header class="mainmenu internal">
             <h1>45-challenge-grid</h1>
-            <img src="../src/imgs/logo-css.png" alt="CSS">
-            <h3>Irregular Gallery: Grid Areas</h3>
+            <img src="../src/imgs/logo-css.png" alt="Html">
+            <h3>Irregular Gallery.</h3>
         </header>
         <section>
-            <h2 class="subtitle">Gallery 1:
-                <div class="images">
-		            <div class="item01"></div>
-		            <div class="item02"></div>
-		            <div class="item03"></div>
-		            <div class="item04"></div>
-		            <div class="item05"></div>
-                    <div class="item06"></div>
-                    <div class="item07"></div>
-	            </div>
-            </h2>
+            <h3>Example 1</h3>
+            <div class="gallery gallery-1">
+                <div class="a"><img src="imgs/ttgl01.jpg" alt="Image 1"></div>
+                <div class="b"><img src="imgs/ttgl02.jpg" alt="Image 2"></div>
+                <div class="c"><img src="imgs/ttgl03.jpg" alt="Image 3"></div>
+                <div class="d"><img src="imgs/ttgl04.jpg" alt="Image 4"></div>
+                <div class="e"><img src="imgs/ttgl05.jpg" alt="Image 5"></div>
+                <div class="f"><img src="imgs/ttgl06.jpg" alt="Image 6"></div>
+                <div class="g"><img src="imgs/ttgl07.jpg" alt="Image 7"></div>
+            </div>
+        </section>
+        <section>
+            <h3>Example 2</h3>
+            <div class="gallery gallery-2">
+                <div class="a"><img src="imgs/sao.jpg" alt="Image 8"></div>
+                <div class="b"><img src="imgs/jigokuraku.jpg" alt="Image 9"></div>
+                <div class="c"><img src="imgs/maromi.jpg" alt="Image 10"></div>
+                <div class="d"><img src="imgs/frieren.jpg" alt="Image 11"></div>
+                <div class="e"><img src="imgs/castlevania.jpg" alt="Image 12"></div>
+                <div class="f"><img src="imgs/momonga.jpg" alt="Image 13"></div>
+            </div>
         </section>
     </main>
 </body>
